@@ -79,10 +79,11 @@ header#cabecalho {
 #navbar a:hover {
     color: var(--color-success);
     transform: scale(1.1) rotate(2deg);
-    transition: transform 500ms cubic-bezier(.63,-0.99,.37,1.99);
+    transition: transform 500ms cubic-bezier(.63,-0.99,.37,1.99), color 1s linear;
 }
 
 #btn-cabecalho {
+    outline: none;
     border: none;
     padding: 0px 20px;
     height: 60px;
@@ -94,12 +95,19 @@ header#cabecalho {
     color: var(--color-third);
     box-shadow: 5px 5px 0px black;
     cursor: pointer;
-    transition: transform 300ms cubic-bezier(.59,.94,.12,1.68), box-shadow 300ms cubic-bezier(.59,.94,.12,1.68);
+    transition: transform 300ms cubic-bezier(.59,.94,.12,1.68), box-shadow 300ms cubic-bezier(.59,.94,.12,1.68), color 100ms linear;
 }
 
 #btn-cabecalho:hover {
     transform: translate(-3px, -3px);
     box-shadow: 8px 8px 0px black;
+    
+}
+
+#btn-cabecalho:active {
+    transform: translate(0px, 0px);
+    box-shadow: 5px 5px 0px black;
+    color: goldenrod;
 }
 
 main {
