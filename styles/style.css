@@ -9,6 +9,13 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+    height: 300vh;
+}
+
+
+
 :root {
     --headline: 'Press Start 2P', cursive;
     --body: 'Fira Code', monospace;
@@ -29,14 +36,16 @@
 }
 
 header#cabecalho {
+    color: white;
     width: 100%;
     height: 80px;
     background-color: var(--color-second);
-    box-shadow: 0px 8px 0px black;
+    box-shadow: 0px 5px 0px black;
     display: flex;
     font-family: var(--body);
     padding: 0px 20px;
     align-items: center;
+    position: relative;
 
 }
 
@@ -45,6 +54,20 @@ header#cabecalho {
     height: 60px;
     box-shadow: 5px 5px 0px black;
     border: 5px  groove var(--color-first);
+}
+
+#cabecalho div.text-reveal h1 {
+    font-family: var(--headline);
+    margin-left: 15px;
+    font-size: 1.5em;
+    text-shadow: 3px 3px black;
+    line-height: 2em;
+}
+
+#cabecalho h1.text-revealable {
+    animation: text-animation 10s ease-in-out infinite;
+    position: absolute;
+    color: white;
 }
 
 #navbar {
@@ -110,8 +133,23 @@ header#cabecalho {
     color: goldenrod;
 }
 
-main {
-    width: 100%;
-    height: 700px;
-    background-color: #52050A;
+
+#arrow-down {
+    position: fixed;    
+    right: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+    margin: 30px;
+    height: 60px;
+    opacity: .5;
+    transition: opacity 0.3s;
 }
+
+#arrow-down:hover {
+    cursor: pointer;
+    opacity: 1;
+    animation: arrow-hover 300ms ease-out infinite alternate;
+    
+}
+
+
