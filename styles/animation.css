@@ -21,24 +21,42 @@
 
 @keyframes text-animation {
     0% {
-        background-color: var(--color-second);
+        background-color: black;
         transform: rotateX(90deg);
     }
     45% {
-        background-color: var(--color-second);
+        background-color: black;
         transform: rotateX(90deg);
         
     }
     50% {
-        background-color: var(--color-second);
+        background-color: black;
         transform: rotateX(0deg);
     }
     95% {
-        background-color: var(--color-second);
+        background-color: black;
         transform: rotateX(0deg);
     }
     100% {
-       background-color: var(--color-second);
+       background-color: black;
        transform: rotateX(90deg);
+    }
+}
+
+@keyframes img-rotation {
+    from {
+        transform: rotate(0deg) scale(200%);
+    }
+
+    to {
+        transform: rotate(360deg) scale(200%);
+    }
+}
+
+
+@keyframes jupiter-translate {
+
+    100% {
+        transform: translateX(-84.55%);    
     }
 }

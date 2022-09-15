@@ -11,35 +11,83 @@
     <link rel="shortcut icon" href="assets/lobbi.ico" type="image/x-icon">
 </head>
 <body>
-    <header id="cabecalho">
-        <img src="assets/images/eu_oculos.png" alt="logo pequeno">
-        
+    <header id="cabecalho">   
+        <nav id="navbar">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </nav>
+
         <div class="text-reveal">
             <h1 class="text-revealable" lang="en">Front-End Dev.</h1>
             <h1>André Jr Mello</h1>
         </div>
 
-
-        <nav id="navbar">
-            <ul>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contatos</a></li>
-            </ul>
-        </nav>
-
-        <button id="btn-cabecalho" lang="en">
-            Download CV
-        </button>
     </header>
 
     <main>
 
-    </main>
-    
-    <img id="arrow-down" src="assets/images/arrow.png" alt="Botão Voltar ao Topo">
+        <section class="jupiter-back">
+            <img src="assets/images/jupiter2.jpg" alt="Imagem Jupiter">
+            <div class="base">
+                <div class="hole-jupiter"></div>
+            </div>
+        </section>
 
+        <section class="bg-montanhas">
+
+
+            <div class="saudation">
+                <h1>Hi there!</h1>
+                <p>
+                    Me chamo André, sou um <strong>Engenheiro de Computação</strong> em formação! 
+                </p>
+                <p>
+                    Tenho paixão por <strong>tecnologia</strong>, sempre busco aprender mais e descobrir coisas novas! 
+                </p>
+            </div>
+
+
+            <div id="sobre" class="box">
+                <h1>Formação Acadêmica</h1>
+                <p class="title">Engenharia de Computação</p>
+                <p class="content">Centro Universitário Eniac - Guarulhos</p>
+                <p class="sub-content"><strong>Conclusão:</strong> 08/2019 – 07/2024</p>
+                <!--  -->
+                <p class="title">Técnico em Manutenção e Suporte em Informática</p>
+                <p class="content">Instituto Federal de Educação, Ciência e Tecnologia - MG</p>
+                <p class="sub-content"><strong>Conclusão:</strong> 08/2022 – 12/2023</p>
+                <!--  -->
+                <p class="title">Técnico em Administração</p>
+                <p class="content">Etec - Santa Isabel</p>
+                <p class="sub-content"><strong>Concluído:</strong> 02/2018 – 07/2019</p>
+            </div>
+        </section>
+
+
+        <div class="montanha-reflexo">
+            
+            <div class="separate"></div>
+            <div class="water-effect"></div>
+
+            <svg>
+                <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+                <feTurbulence id="sea-filter" numOctaves="2" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+                <feDisplacementMap scale="15" in="SourceGraphic"></feDisplacementMap>
+                <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
+                </filter>
+            </svg>
+        </div>
+        
+        
+        
+    </main>
+
+    <img id="arrow-down" src="assets/images/arrow.png" alt="Botão Voltar ao Topo">
+    
 
 </body>
 </html>

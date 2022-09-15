@@ -9,9 +9,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     position: relative;
-    height: 300vh;
+    background-color: black;
 }
 
 
@@ -38,41 +42,16 @@ body {
 header#cabecalho {
     color: white;
     width: 100%;
-    height: 80px;
-    background-color: var(--color-second);
-    box-shadow: 0px 5px 0px black;
+    height: 10vh;
     display: flex;
     font-family: var(--body);
-    padding: 0px 20px;
     align-items: center;
-    position: relative;
 
-}
-
-#cabecalho img {
-    width: 60px;
-    height: 60px;
-    box-shadow: 5px 5px 0px black;
-    border: 5px  groove var(--color-first);
-}
-
-#cabecalho div.text-reveal h1 {
-    font-family: var(--headline);
-    margin-left: 15px;
-    font-size: 1.5em;
-    text-shadow: 3px 3px black;
-    line-height: 2em;
-}
-
-#cabecalho h1.text-revealable {
-    animation: text-animation 10s ease-in-out infinite;
-    position: absolute;
-    color: white;
 }
 
 #navbar {
     flex: auto;
-    text-align: right;
+    text-align: center;
 }
 
 #navbar ul {
@@ -85,7 +64,6 @@ header#cabecalho {
 }
 
 #navbar a {
-    display: inline-block;
     text-decoration: none;
     color: var(--color-third);
     font-size: 18px;
@@ -99,39 +77,180 @@ header#cabecalho {
     font-family: var(--headline);
 }
 
-#navbar a:hover {
-    color: var(--color-success);
-    transform: scale(1.1) rotate(2deg);
-    transition: transform 500ms cubic-bezier(.63,-0.99,.37,1.99), color 1s linear;
+
+/* Fim Cabecalho */
+
+
+/*-------- Início Conteúdo Main --------*/
+
+/* Jupiter Section */
+.jupiter-back {
+    position: relative;
+    margin-top: 10vh;
+	width: 100%;
+	height: 90vh;
+    background-color: black;
+    background-clip: border-box;
+    overflow: hidden;
 }
 
-#btn-cabecalho {
-    outline: none;
-    border: none;
-    padding: 0px 20px;
-    height: 60px;
-    background-color: var(--color-first);
-    font-family: var(--body);
-    font-weight: bold;
-    text-shadow: 1px 1px 1px black;
-    font-size: 1.2em;
-    color: var(--color-third);
-    box-shadow: 5px 5px 0px black;
-    cursor: pointer;
-    transition: transform 300ms cubic-bezier(.59,.94,.12,1.68), box-shadow 300ms cubic-bezier(.59,.94,.12,1.68), color 100ms linear;
+.jupiter-back img {    
+    position: absolute;
+    animation: jupiter-translate 35s linear 0s infinite backwards;
+    left: 50%;
+    transform: translateX(-15.45%);
+
 }
 
-#btn-cabecalho:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 8px 8px 0px black;
+.base {
+    padding-top: 6px;
+	width: 100%;
+	height: 600px;
+	background-color: black;
+	mix-blend-mode: hard-light;
+    /* opacity: .5; */
+}
+
+.hole-jupiter {
+    margin: auto;
+	width: 600px;
+	height: 588px;
+    box-shadow: 0px 0px 6px rgba(0, 255, 242, 0.25), inset 0px 0px 150px rgba(0, 0, 0, .9);
+	border-radius: 50%;
+	background-color: gray;
+}
+
+div.text-reveal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--headline);
+    font-size: .5em;
+    line-height: 2em;
+}
+
+h1.text-revealable {
+    animation: text-animation 8s ease-in-out infinite;
+    position: absolute;
     
 }
+/*Fim Jupiter Section */
 
-#btn-cabecalho:active {
-    transform: translate(0px, 0px);
-    box-shadow: 5px 5px 0px black;
-    color: goldenrod;
+
+/* Montanhas */
+section.bg-montanhas {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url(/assets/images/montanhas.png), linear-gradient(0deg, #a18b93 15%, #488bad 40.5%,#8356bade 55%,#0b0049b4 90%, black 95%);
+
 }
+
+div.saudation {
+    position: relative;
+    z-index: 2;
+    width: 550px;
+    height: 280px;
+    top: 30vh;
+    left: 8vw;
+    margin-right: 20vw;
+    font-family: var(--headline);
+    line-height: 1.5em;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+div.saudation p {
+    font-family: var(--body);
+    font-size: 1.4em;
+    margin: 10px 15px;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+div.box {
+    position: relative;
+    z-index: 2;
+    box-sizing: content-box;
+    padding-top: 15vh;
+    width: 720px;
+    height: 310px;
+    top: 15vh;
+    left: 8vw;
+    text-shadow: 1px 1px black;
+    color: white;
+    font-family: var(--body);
+    line-height: 1.5em;
+}
+
+div.box h1, div.saudation h1 {
+    font-family: var(--headline);
+    text-shadow: 2px 2px black;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+div.box .title { 
+    font-size: 1.4em;
+    color: var(--color-warning);
+    margin: 5px 0px 5px 15px;
+    font-weight: bold;
+}
+
+div.box .title:before {
+    content: '-> ';
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+div.box .content:before ,.sub-content:before {
+    content: '--> ';
+    color: var(--color-success);
+    margin-left: 55px;
+    font-weight: bold;
+
+}
+
+strong {
+    font-weight: bold;
+}
+/* Fim Montanhas */
+
+/* Reflexo Montanhas */
+div.montanha-reflexo {
+    overflow: hidden;
+    height: 480px;
+}
+
+div.separate {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(1deg,rgba(83, 85, 82, 0) 30%, rgba(36, 160, 129, 0.15) 80%,  rgba(0, 41, 39, 0.25) );
+}
+
+div.water-effect {
+    background: url(/assets/images/montanhas.png),  cornflowerblue;
+    position: relative;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 500px;
+    transform: rotateX(180deg) scaleX(108%) translateY(-2px);
+    
+    filter: url("#turbulence");
+
+}
+/*Fim Reflexo Montanhas */
+
+
+
+
+
+
+
 
 
 #arrow-down {
