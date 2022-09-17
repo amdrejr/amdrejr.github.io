@@ -60,3 +60,9 @@
         transform: translateX(-84.55%);    
     }
 }
+
+@keyframes meteorites-animation {
+    100% {
+        transform: translateX(-100vw);
+    }
+}
