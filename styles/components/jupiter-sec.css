@@ -13,26 +13,27 @@
 
 .jupiter-sec img {    
     position: absolute;
-    animation: jupiter-translate 35s linear 0s infinite backwards;
+    animation: jupiter-rotation 30s linear 0s infinite reverse backwards;
     left: 50%;
     transform: translateX(-15.45%);
 
 }
 
-.base {
+.base-jupiter {
     padding-top: 6px;
 	width: 100%;
 	height: 600px;
 	background-color: black;
 	mix-blend-mode: hard-light;
     /* opacity: .5; */
+    
 }
 
 .hole-jupiter {
     margin: auto;
 	width: 600px;
 	height: 588px;
-    box-shadow: 0px 0px 6px rgba(0, 255, 242, 0.25), inset 0px 0px 150px rgba(0, 0, 0, .9);
+    box-shadow: 0px 0px 6px rgba(0, 255, 242, 0.25), inset 0px 0px 150px rgba(0, 0, 0, 1);
 	border-radius: 50%;
 	background-color: gray;
 }
@@ -52,3 +53,10 @@ h1.text-revealable {
     
 }
 /*Fim Jupiter Section */
+
+@keyframes jupiter-rotation {
+
+    100% {
+        transform: translateX(-84.55%);    
+    }
+}
