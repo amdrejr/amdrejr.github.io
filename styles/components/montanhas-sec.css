@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Montanhas Section */
+section.montanhas-sec {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    background-image: url(/assets/images/montanhas.png), linear-gradient(0deg, #a18b93 15%, #488bad 40.5%,#8356bade 55%,#0b0049b4 90%, black 95%);
+}
+
+div.saudation {
+    position: relative;
+    z-index: 2;
+    width: 550px;
+    height: 280px;
+    top: 30vh;
+    left: 8vw;
+    margin-right: 20vw;
+    font-family: var(--headline);
+    line-height: 1.5em;
+    color: var(--color-success);
+    text-shadow: 1px 1px black;
+}
+
+div.saudation p {
+    font-family: var(--body);
+    font-size: 1.4em;
+    margin: 10px 15px;
+    text-indent: 2em;
+    text-align: justify;
+    color: white;
+}
+
+div.box {
+    position: relative;
+    z-index: 2;
+    box-sizing: content-box;
+    padding-top: 15vh;
+    width: 720px;
+    height: 310px;
+    top: 15vh;
+    left: 8vw;
+    text-shadow: 1px 1px black;
+    color: white;
+    line-height: 1.5em;
+}
+
+div.box h1, div.saudation h1 {
+    font-family: var(--headline);
+    text-shadow: 2px 2px black;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+div.box .title { 
+    font-size: 1.4em;
+    color: var(--color-warning);
+    margin: 5px 0px 5px 15px;
+    font-weight: bold;
+}
+
+div.box .title:before, .content:before,.sub-content:before {
+    content: '-> ';
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+div.box .content:before, .sub-content:before {
+    content: '--> ';
+    margin-left: 55px;
+}
+
+strong {
+    font-weight: bold;
+}
+/* Fim Montanhas */
+
+/* Reflexo Montanhas */
+
+div.montanha-reflexo {
+    overflow: hidden;
+
+}
+
+div.separate {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(1deg,rgba(83, 85, 82, 0) 30%, rgba(36, 160, 129, 0.15) 80%,  rgba(0, 41, 39, 0.25) );
+}
+
+div.water-effect {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    transform: rotateX(180deg) scaleX(135%)  translateY(-2px) skewX(-8deg);
+    filter: url("#turbulence");
+    background-image: url(/assets/images/montanhas.png), linear-gradient(0.2deg, #7575a1 35%, #488bad 73.5%,#774faa 85%,#402557 90%, black 99%);
+}
+
+div.montanha-reflexo svg {
+    width: 0;
+    height: 0;
+}
+/*Fim Reflexo Montanhas */

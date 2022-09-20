@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* Jupiter Section */
+.jupiter-sec {
+    position: relative;
+    margin-top: 10vh;
+	width: 100%;
+	height: 90vh;
+    background-color: black;
+    background-clip: border-box;
+    overflow: hidden;
+}
+
+.jupiter-sec img {    
+    position: absolute;
+    animation: jupiter-translate 35s linear 0s infinite backwards;
+    left: 50%;
+    transform: translateX(-15.45%);
+
+}
+
+.base {
+    padding-top: 6px;
+	width: 100%;
+	height: 600px;
+	background-color: black;
+	mix-blend-mode: hard-light;
+    /* opacity: .5; */
+}
+
+.hole-jupiter {
+    margin: auto;
+	width: 600px;
+	height: 588px;
+    box-shadow: 0px 0px 6px rgba(0, 255, 242, 0.25), inset 0px 0px 150px rgba(0, 0, 0, .9);
+	border-radius: 50%;
+	background-color: gray;
+}
+
+div.text-reveal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--headline);
+    font-size: .5em;
+    line-height: 2em;
+}
+
+h1.text-revealable {
+    animation: text-animation 8s ease-in-out infinite;
+    position: absolute;
+    
+}
+/*Fim Jupiter Section */

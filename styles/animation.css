@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @keyframes voar {
     0% {
         transform: translateX(0);
