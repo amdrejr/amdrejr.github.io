@@ -13,7 +13,7 @@
 
 .jupiter-sec img {    
     position: absolute;
-    animation: jupiter-rotation 30s linear 0s infinite reverse backwards;
+    animation: jupiter-rotation 40s linear 0s infinite reverse backwards;
     left: 50%;
     transform: translateX(-15.45%);
 
