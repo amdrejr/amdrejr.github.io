@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 /* Mars Section */
-section.mars-sec {
+section#mars-sec {
     position: relative;
     width: 100%;
     height: 100vh;
     
 }
 
-.mars-sec img {
+#mars-sec img {
     position: absolute;
     left: 10%;
     top: 30%;
@@ -34,6 +34,11 @@ section.mars-sec {
     border-radius: 50%;
 	background-color: gray;
     box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322), inset 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+#mars-sec p {
+    text-align: center;
+    font-size: 2em;
 }
 
 
