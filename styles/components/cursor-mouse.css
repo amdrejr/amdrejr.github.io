@@ -1,0 +1,22 @@
+#cursor-mouse {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px dashed white;
+    z-index: 10;
+    box-sizing: border-box;
+    animation: mouse-rotate 5s linear infinite;
+    pointer-events: none; /* Remove click sobre, sendo possível clicar nos itens abaixo*/
+    display: none;
+    
+    transition-property: top, left;
+    transition-duration: 50ms;
+}
+
+
+@keyframes mouse-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}

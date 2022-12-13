@@ -13,7 +13,6 @@ section#mars-sec {
     left: 10%;
     top: 30%;
     animation: mars-rotation 60s linear 0s infinite reverse backwards;
-    
 }
 
 .base-mars {
@@ -33,7 +32,7 @@ section#mars-sec {
     height: 296px;
     border-radius: 50%;
 	background-color: gray;
-    box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322), inset 0px 0px 50px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 25px -20px 25px black, inset 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
 #mars-sec p {
