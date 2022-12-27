@@ -24,7 +24,7 @@ header#cabecalho {
 
 #navbar a {
     text-decoration: none;
-    color: var(--color-third);
+    color: white;
     font-size: 18px;
     letter-spacing: 1px;
 }

@@ -11,11 +11,11 @@
     --color-black-third: #828282;
 
     --color-first: #EC7100;
-    --color-second: #642CA9;
-    --color-third: white;
-    --color-fourth: #227C9D;
+    --color-second: #FFD447;
+    --color-third: #a2ee4b;
+    --color-fourth: #2b0e02;
 
-    --color-error: #52050A;
+    --color-error: #ac0000;
     --color-success: #a2ee4b;
     --color-warning: #FFD447;
 }
