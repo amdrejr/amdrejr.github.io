@@ -5,7 +5,8 @@ section#mars-sec {
     position: relative;
     width: 100%;
     height: 100vh;
-    
+    overflow: hidden;
+    display: flex;
 }
 
 #mars-sec img {
@@ -38,6 +39,22 @@ section#mars-sec {
 #mars-sec p {
     text-align: center;
     font-size: 2em;
+}
+
+/* Media Querys */
+@media screen and (max-width: 992px) {
+    #mars-sec img {
+        height: 30.5vw;
+    }
+    
+    .base-mars {
+        height: 31vw;
+    }
+    .hole-mars {
+        width: 30.5vw;
+        height: calc(30.5vw - 4px);
+        box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 3vw -2vw 25px black, inset 0px 0px 1vw rgba(0, 0, 0, 1);
+    }
 }
 
 

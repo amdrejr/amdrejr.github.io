@@ -37,6 +37,7 @@ body {
     background-color: black;
     font-family: var(--body);
     color: white;
+    overflow-x: hidden;
 }
 
 

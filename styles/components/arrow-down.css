@@ -17,3 +17,12 @@
     animation: arrow-hover 300ms ease-out infinite alternate;
     
 }
+
+@keyframes arrow-hover {
+    0% {
+        transform: translateY(0px) rotate(-90deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(-90deg);
+    }
+}

@@ -7,7 +7,7 @@
     z-index: 10;
     box-sizing: border-box;
     animation: mouse-rotate 5s linear infinite;
-    pointer-events: none; /* Remove click sobre, sendo possível clicar nos itens abaixo*/
+    pointer-events: none; /* Remove click sobre, sendo possível clicar nos elementos abaixo*/
     display: none;
     
     transition-property: top, left;
