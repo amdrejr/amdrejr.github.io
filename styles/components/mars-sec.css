@@ -7,6 +7,8 @@ section#mars-sec {
     height: 100vh;
     overflow: hidden;
     display: flex;
+
+    /* display: none; */
 }
 
 #mars-sec img {
@@ -38,7 +40,7 @@ section#mars-sec {
 
 #mars-sec p {
     text-align: center;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 /* Media Querys */

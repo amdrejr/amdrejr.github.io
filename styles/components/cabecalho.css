@@ -6,6 +6,8 @@ header#cabecalho {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* display: none; */
 }
 
 #navbar {
@@ -25,14 +27,14 @@ header#cabecalho {
 #navbar a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 1.125rem /*18px*/;
     letter-spacing: 1px;
 }
 
 #navbar a::before {
     content: '> ';
     color: var(--color-first);
-    font-size: 11px;
+    font-size: 0.688rem /*11px*/;
     font-family: var(--headline);
 }
 
@@ -53,7 +55,7 @@ header#cabecalho {
 
 .icon-menu .icon-menu-anel {
     position: absolute;
-    animation: rotation 40s linear 0s infinite;
+    animation: rotation 20s linear 0s infinite;
     filter: drop-shadow(0px 0px 2px #ec7200be);
 
 }
@@ -67,7 +69,7 @@ div.text-reveal {
     top: 0;
     right: 0;
     font-family: var(--headline);
-    font-size: .5em;
+    font-size: .5rem;
     line-height: 2em;
 }
 

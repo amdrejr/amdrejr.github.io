@@ -9,6 +9,7 @@ section.div-meteorites {
     align-items: center;
     overflow: hidden;
     background-image: black;
+    /* display: none; */
 }
 div.meteorites {
     position: absolute;
