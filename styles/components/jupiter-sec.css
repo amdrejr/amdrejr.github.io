@@ -38,20 +38,6 @@
 	background-color: gray;
 }
 
-div.text-reveal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: var(--headline);
-    font-size: .5em;
-    line-height: 2em;
-}
-
-h1.text-revealable {
-    animation: text-animation 8s ease-in-out infinite;
-    position: absolute;
-    
-}
 /*Fim Jupiter Section */
 
 /* Media Querys */

@@ -37,14 +37,44 @@ header#cabecalho {
 }
 
 .icon-menu {
-    background-image: url(../../assets/images/icon-menu.png);
-    background-size: cover;
-    image-rendering: pixelated;
-    width: 42px;
+    position: relative;
+    background: none repeat scroll 0 0 transparent;
+    border: none;
+    width: 40px;
     height: 40px;
-    overflow: hidden;
-    text-indent: -9999px;
+    color: white;
     display: none;
+    cursor: pointer;
+}
+
+.icon-menu img {
+    image-rendering: pixelated;
+}
+
+.icon-menu .icon-menu-anel {
+    position: absolute;
+    animation: rotation 40s linear 0s infinite;
+    filter: drop-shadow(0px 0px 2px #ec7200be);
+
+}
+
+.icon-menu .icon-icon-menu {
+    animation: blink 10s linear infinite;
+}
+
+div.text-reveal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--headline);
+    font-size: .5em;
+    line-height: 2em;
+}
+
+h1.text-revealable {
+    animation: text-animation 8s ease-in-out infinite;
+    position: absolute;
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -55,4 +85,25 @@ header#cabecalho {
     header .icon-menu {
         display: block;
     }
+
+    div.text-reveal {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+    0% { filter: none; 
+        
+    }
+    50% { 
+        filter: sepia(50%) drop-shadow(0px 0px 20px rgba(255, 81, 0, 0.897));
+     }
+    0% { filter: none; }
 }
