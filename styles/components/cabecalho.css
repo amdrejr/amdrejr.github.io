@@ -6,21 +6,14 @@ header#cabecalho {
     display: flex;
     align-items: center;
     justify-content: center;
-
     /* display: none; */
 }
 
-#navbar {
-    flex: auto;
-    text-align: center;
-}
-
-#navbar ul {
-    margin-right: 50px;
-}
-
-#navbar li {
+#navbar ul li{
     display: inline;
+}
+
+#navbar ul li:nth-child(n+2):nth-child(-n+7) {
     margin-left: 50px;    
 }
 
@@ -38,29 +31,30 @@ header#cabecalho {
     font-family: var(--headline);
 }
 
-.icon-menu {
+#icon-menu {
     position: relative;
     background: none repeat scroll 0 0 transparent;
     border: none;
+    margin: 10px 0px 5px 0px;
     width: 40px;
     height: 40px;
-    color: white;
-    display: none;
     cursor: pointer;
+    display: none;
 }
 
-.icon-menu img {
+#icon-menu img {
     image-rendering: pixelated;
 }
 
-.icon-menu .icon-menu-anel {
+#icon-menu .icon-menu-anel {
+    z-index: 5;
     position: absolute;
-    animation: rotation 20s linear 0s infinite;
-    filter: drop-shadow(0px 0px 2px #ec7200be);
+    animation: rotation 7s linear 0s infinite;
+    filter: drop-shadow(0px 0px 2px #d342ffc0);
 
 }
 
-.icon-menu .icon-icon-menu {
+#icon-menu .icon-icon-menu {
     animation: blink 10s linear infinite;
 }
 
@@ -80,13 +74,30 @@ h1.text-revealable {
 }
 
 @media screen and (max-width: 768px) {
-    header nav#navbar {
-        display: none;
+
+    header#cabecalho { flex-direction: column; justify-content: stretch; }
+
+    #icon-menu { display: block;  }
+
+    #navbar {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    header nav#navbar ul {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        pointer-events: none;
+        flex-direction: column;
+        gap: 15px;
+        opacity: 0;
+        transition: opacity .3s  ease-in-out;
     }
 
-    header .icon-menu {
-        display: block;
-    }
+    #navbar ul li:nth-child(n+2):nth-child(-n+7) { margin-left: 0px }
 
     div.text-reveal {
         top: auto;
@@ -97,7 +108,9 @@ h1.text-revealable {
 @keyframes rotation {
     0% { transform: rotate(0deg); }
 
-    100% { transform: rotate(360deg); }
+    50% { transform: rotate(180deg) skew(-16deg, -10deg) scale(.80) } 
+
+    100% { transform: rotate(360deg) } 
 }
 
 @keyframes blink {
