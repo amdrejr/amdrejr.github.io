@@ -17,14 +17,14 @@ header#cabecalho {
     margin-left: 50px;    
 }
 
-#navbar a {
+#navbar ul.ulNav li a {
     text-decoration: none;
     color: white;
     font-size: 1.125rem /*18px*/;
     letter-spacing: 1px;
 }
 
-#navbar a::before {
+#navbar ul.ulNav li a::before {
     content: '> ';
     color: var(--color-first);
     font-size: 0.688rem /*11px*/;
@@ -90,11 +90,12 @@ h1.text-revealable {
         position: relative;
         z-index: 10;
         display: flex;
-        pointer-events: none;
         flex-direction: column;
         gap: 15px;
-        opacity: 0;
-        transition: opacity .3s  ease-in-out;
+    }
+
+    header #navbar ul.ulNav li a {
+        display: none;
     }
 
     #navbar ul li:nth-child(n+2):nth-child(-n+7) { margin-left: 0px }
