@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
 header#cabecalho {
+    position: absolute;
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     /* display: none; */
+    z-index: 3;
 }
 
 #navbar ul li{
@@ -40,6 +42,7 @@ header#cabecalho {
     height: 40px;
     cursor: pointer;
     display: none;
+    z-index: 4;
 }
 
 #icon-menu img {
@@ -58,20 +61,7 @@ header#cabecalho {
     animation: blink 10s linear infinite;
 }
 
-div.text-reveal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: var(--headline);
-    font-size: .5rem;
-    line-height: 2em;
-}
 
-h1.text-revealable {
-    animation: text-animation 8s ease-in-out infinite;
-    position: absolute;
-    
-}
 
 @media screen and (max-width: 768px) {
 
@@ -99,11 +89,6 @@ h1.text-revealable {
     }
 
     #navbar ul li:nth-child(n+2):nth-child(-n+7) { margin-left: 0px }
-
-    div.text-reveal {
-        top: auto;
-        bottom: 0;
-    }
 }
 
 @keyframes rotation {

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+div.text-reveal {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    font-family: var(--headline);
+    font-size: .5rem;
+    line-height: 2em;
+}
+
+h1.text-revealable {
+    animation: text-animation 8s ease-in-out infinite;
+    position: absolute;
+    
+}
+
+@media screen and (max-width: 992px) { 
+    div.text-reveal {
+        top: auto;
+        bottom: 0;
+    }
+}

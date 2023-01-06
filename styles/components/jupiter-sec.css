@@ -4,7 +4,7 @@
 .jupiter-sec {
     position: relative;
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
     background-color: black;
     background-clip: border-box;
     overflow: hidden;
@@ -40,6 +40,30 @@
 	background-color: gray;
 }
 
+
+div.jupiter-box {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    
+
+}
+
+div.jupiter-box h1 {
+    font-size: clamp( 22px, 1.7vw, 2rem);
+    color: var(--color-first);
+    text-shadow: 1.5px 1.5px 0px var(--color-fourth);
+    font-weight: bold;
+    margin: 5px;
+}
+
+div.jupiter-box p {
+    font-size: clamp( 16px, 1.3vw, 1.6rem);
+
+    text-shadow: 1px 1px 0px black;
+
+}
+
 /*Fim Jupiter Section */
 
 /* Media Querys */
@@ -56,6 +80,13 @@
 
     .jupiter-sec img {
         height: 59.5vw;
+    }
+
+    div.jupiter-box {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
     }
 }
 
