@@ -198,7 +198,11 @@ div.itemProject:hover > img.img-flutuant {
 
     div.itemProject { 
         height: auto;
-        padding-bottom: max(27.3px ,2.35vw);
+        padding: max(27.3px ,2.35vw);
+    }
+
+    div.itemProject:hover {
+        padding: max(27.3px ,2.35vw);
     }
 
     div.itemProject.qui {
@@ -212,5 +216,6 @@ div.itemProject:hover > img.img-flutuant {
         opacity: 1; 
         position: static; 
         margin-bottom: 1vw;
+        z-index: 3;
     }
 }

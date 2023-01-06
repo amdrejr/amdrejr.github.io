@@ -37,7 +37,7 @@ body {
     background-color: black;
     font-family: var(--body);
     color: white;
-    overflow-x: hidden;
+    overflow-x: hidden;    
 }
 
 strong {
@@ -45,7 +45,7 @@ strong {
 }
 
 p, h1, h2, h3 {
-    cursor: default;
+    user-select: none; /* desabilitar seleção */
 }
 
 
