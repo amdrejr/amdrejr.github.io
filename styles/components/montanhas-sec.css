@@ -50,7 +50,7 @@ div.box h1, div.saudation h1 {
 
 div.box .title { 
     font-size: clamp(1.125rem,  4.6vw ,1.6rem);
-    color: var(--color-warning);
+    color: var(--color-second);
     font-weight: bold;
 }
 

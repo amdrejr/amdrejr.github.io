@@ -7,13 +7,13 @@
     --body: 'Fira Code', monospace;
 
     --color-black-first: black;
-    --color-black-second: #3A4042;
+    --color-black-second: rgb(51, 47, 44);
     --color-black-third: #828282;
 
     --color-first: #EC7100;
     --color-second: #FFD447;
     --color-third: #a2ee4b;
-    --color-fourth: #2b0e02;
+    --color-fourth: #321e60;
 
     --color-error: #ac0000;
     --color-success: #a2ee4b;
@@ -40,8 +40,13 @@ body {
     overflow-x: hidden;
 }
 
+strong {
+    color: #dfb289;
+}
 
-
+p, h1, h2, h3 {
+    cursor: default;
+}
 
 
 
