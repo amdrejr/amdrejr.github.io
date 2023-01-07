@@ -34,3 +34,14 @@ a.email {
     position: absolute;
     right: 10px;
 }
+
+@media screen and (max-width: 992px) {
+    footer#foot {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+    a.email {
+        position: relative;
+    }
+}
