@@ -8,17 +8,42 @@ section#aboutMe-sec {
 }
 
 div.aboutMe-box {
-    width: 500px;
-    height: 500px;
-    background-color: gray;
+    width: 900px;
+    position: relative;
+    display: flex;
 }
 
-.aboutMe-title {
-    width: 500px;
-}
-
-.aboutMe-title h1 {
-    font-size: 100px;
+div.aboutMe-title {
     font-family: var(--headline);
-    text-align: right;
+    color: var(--color-black-second);
+    text-shadow: -0.2vw -0.2vw 0px var(--color-black-third);
+    font-size: 100px;
+    padding: 20px;
+    text-align: end;
+    writing-mode: vertical-rl;
+
+}
+div.aboutMe-title em {
+    font-size: 200px;
+    line-height: 120px;
+    text-shadow: -0.4vw -0.4vw 0px var(--color-black-third);
+}
+
+div.aboutMe-text {
+    text-shadow: 1px 0px 0px var(--color-black-third);
+    padding: 10px;
+}
+
+div.aboutMe-text h1 {
+    font-family: var(--headline);
+    color: var(--color-success);
+    text-shadow: 2px 2px var(--color-fourth);
+    font-size: clamp(1rem, 4.6vw, 2rem);
+    margin-bottom: 10px;
+}
+
+div.aboutMe-text p {
+    margin-bottom: 10px;
+    font-size: clamp(1rem, 3.7vw, 1.6rem);
+    line-height: clamp(1rem, 4.6vw, 2rem);
 }

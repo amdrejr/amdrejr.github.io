@@ -50,7 +50,7 @@ div.jupiter-box {
 }
 
 div.jupiter-box h1 {
-    font-size: clamp( 22px, 1.7vw, 2rem);
+    font-size: clamp( 22px, 2.2vw, 2rem);
     color: var(--color-first);
     text-shadow: 1.5px 1.5px 0px var(--color-fourth);
     font-weight: bold;
@@ -58,7 +58,7 @@ div.jupiter-box h1 {
 }
 
 div.jupiter-box p {
-    font-size: clamp( 16px, 1.3vw, 1.6rem);
+    font-size: clamp( 16px, 1.68vw, 1.6rem);
 
     text-shadow: 1px 1px 0px black;
 
@@ -83,7 +83,7 @@ div.jupiter-box p {
     }
 
     div.jupiter-box {
-        bottom: 20px;
+        bottom: 70px;
         left: 50%;
         transform: translateX(-50%);
         width: 250px;
