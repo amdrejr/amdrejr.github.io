@@ -1,0 +1,36 @@
+footer#foot {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+div.social-medias {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+div.social-medias img.ico {
+    width: 30px;
+    height: 30px;
+    image-rendering: pixelated;
+    transition: transform 100ms linear;
+}
+
+div.social-medias img.ico:hover {
+    transform: scale(1.2)
+}
+
+a.email {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 10px;
+}
