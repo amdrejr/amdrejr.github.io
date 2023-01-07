@@ -209,11 +209,9 @@ div.itemProject:hover > img.img-flutuant {
     }
 
     div.itemProject.qui {
-        align-self: center;
         padding: 15px;
     }
 
-    div.itemProject.qui i { display: none }
 
     div.itemProject.qui p { 
         opacity: 1; 

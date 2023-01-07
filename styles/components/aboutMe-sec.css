@@ -24,7 +24,8 @@ div.aboutMe-title {
 
 }
 div.aboutMe-title em {
-    font-size: 200px;
+    display: block;
+    font-size: 2em;
     line-height: 120px;
     text-shadow: -0.4vw -0.4vw 0px var(--color-black-third);
 }
@@ -46,4 +47,24 @@ div.aboutMe-text p {
     margin-bottom: 10px;
     font-size: clamp(1rem, 3.7vw, 1.6rem);
     line-height: clamp(1rem, 4.6vw, 2rem);
+}
+
+
+@media screen and (max-width: 992px) {
+
+    div.aboutMe-title { 
+        font-size: clamp(40px, 9vw,100px);
+        padding: 5px;
+        text-align: right;
+    }
+    div.aboutMe-title em {
+        text-shadow: -0.2vw -0.2vw 0px var(--color-black-third);   
+        font-size: clamp(40px, 9vw,100px);
+        line-height: inherit;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div.aboutMe-title { text-align: center; }
+    div.aboutMe-title em { display: inline; } 
 }
