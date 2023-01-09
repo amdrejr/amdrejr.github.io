@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/components/arrow-down.css"> 
     -->
     <link rel="stylesheet" href="styles/components/text-reveal.css">
+    <link rel="stylesheet" href="/styles/components/contact-sec.css">
     
     <link rel="stylesheet" href="/styles/components/cursor-mouse.css">
 </head>
@@ -45,7 +46,7 @@
                 <li><a href="#aboutMe-sec">Sobre</a></li>
                 <li><a href="#myProjects">Projetos</a></li>
                 <li><a href="#formacao">Formação</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#contact-sec">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -172,9 +173,29 @@
                 </filter>
             </svg>
         </div>
+
+        <section id="contact-sec">
+            <h1>Contact</h1>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+
+                <label for="forNome">Nome: </label>
+                <input type="text" name="name" id="forNome" placeholder="Digite seu nome" autocomplete="additional-name" required>
+    
+                <label for="forEmail">E-mail:</label>
+                <input type="email" name="email" id="forEmail" placeholder="Digite seu e-mail" required>
+    
+                <label for="forMessage">Mensagem:</label>
+                <textarea name="message" id="forMessage"></textarea>
+    
+                <button type="submit">Enviar</button>
+    
+                <input type="hidden" name="accessKey" value="24b07264-b92b-4430-aa23-aff0ed8a9ebd">
+                <input type="hidden" name="redirectTo" value="https://amdrejr.github.io/contact.html">
+            </form>
+
+        </section>
         
     </main>
-
 
     <footer id="foot">
         <div class="social-medias">
