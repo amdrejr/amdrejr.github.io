@@ -10,7 +10,7 @@ section#mars-sec {
     /* display: none; */
 }
 
-#mars-sec img {
+#mars-sec > img {
     position: absolute;
     left: 10%;
     top: 30%;
@@ -37,25 +37,146 @@ section#mars-sec {
     box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 25px -20px 25px black, inset 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
-#mars-sec p {
-    font-size: 2rem;
-    margin: 50px;
+/* Skill Content */
+
+.mars-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mars-content h1 {
+    font-family: var(--headline);
+    color: var(--color-black-second);
+    text-shadow: -0.2vw -0.2vw 0px var(--color-black-third);;
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.mars-content h2 {
+    font-family: var(--body);
+    font-size: 1.2em;
+}
+
+
+div#mars-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: min-content;
+    gap: 50px;
+}
+
+div.skill-item {
+    width: 210px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'imagem titulo titulo'
+    'imagem progress progress';
+}
+
+
+img.skill-image {
+    grid-area: imagem;
+    image-rendering: pixelated;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.skill-title {
+    grid-area: titulo;
+    font-family: var(--body);
     text-align: center;
 }
 
+.progress {
+    height: 25px;
+    width: 150px;
+    grid-area: progress;
+    border: 6px solid var(--color-first);
+    border-image-source: url('/assets/images/borda-battery.png');
+    image-rendering: pixelated;
+    border-image-slice: 9;
+    overflow: hidden;
+}
+
+div.prog-charge {
+    background-image: url('/assets/images/progress-bar.png');
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+}
+
+div.prog-charge.js      {width: 70% }
+div.prog-charge.css     {width: 85% }
+div.prog-charge.html    {width: 90% }
+div.prog-charge.flutter {width: 50% }
+div.prog-charge.python  {width: 65% }
+div.prog-charge.react   {width: 50% }
+div.prog-charge.native  {width: 40% }
+
+
+
+
+
+
+
+
 /* Media Querys */
+@media screen and (max-width: 1620px) {
+    .mars-content {
+        left: 45%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .mars-content h1 { font-size: 75px}
+    div#mars-skills {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+
 @media screen and (max-width: 992px) {
-    #mars-sec img {
-        height: 30.5vw;
-    }
+
+    #mars-sec { height: 85vh;}
+
+    #mars-sec > img { height: 40.5vw; }
     
-    .base-mars {
-        height: 31vw;
-    }
+    .base-mars { height: 41vw; }
+
+    #mars-sec > img, .base-mars, .hole-mars { top: 0; }
+
     .hole-mars {
-        width: 30.5vw;
-        height: calc(30.5vw - 4px);
+        width: 40.5vw;
+        height: calc(40.5vw - 4px);
         box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 3vw -2vw 25px black, inset 0px 0px 1vw rgba(0, 0, 0, 1);
+    }
+
+    div.mars-content { 
+        padding-top: 15vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mars-content h1 { font-size: 48px}
+
+    div#mars-skills { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 25px;
     }
 }
 

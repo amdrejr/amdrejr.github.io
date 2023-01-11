@@ -43,8 +43,8 @@ div.box {
 div.box h1, div.saudation h1 {
     font-family: var(--headline);
     text-shadow: 2px 2px black;
-    font-size: clamp(1rem, 4.6vw, 2rem);
-    line-height: 1.2rem;
+    font-size: clamp(1.10rem, 3.8vw, 2rem);
+    line-height: 2rem;
     margin-bottom: min(30px, 5vw);
 }
 
