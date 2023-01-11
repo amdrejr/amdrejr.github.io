@@ -193,6 +193,7 @@ div.itemProject:hover > img.img-flutuant {
 @media screen and (max-width: 920px) {
     section#myProjects {
         height: auto;
+        margin-bottom: 10vw;
     }
 
     div.gridProjectItens {
