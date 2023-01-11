@@ -11,7 +11,7 @@ section#myProjects {
     justify-content: center;
     gap: clamp(8px ,2.9vw, 30px);
 
-    display: none;
+    /* display: none; */
 }
 
 section#myProjects > h1 {
