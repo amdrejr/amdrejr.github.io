@@ -61,7 +61,7 @@ div.jupiter-box h1 {
 
 div.jupiter-box p {
     font-size: clamp( 16px, 1.68vw, 1.6rem);
-    text-shadow: 1px 1px 0px black;
+    text-shadow: 1px 1px 0px black, 0px 0px 2px rgb(0, 0, 0);
 }
 
 /*Fim Jupiter Section */
