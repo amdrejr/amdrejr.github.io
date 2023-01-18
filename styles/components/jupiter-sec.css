@@ -54,7 +54,7 @@ div.jupiter-box {
 div.jupiter-box h1 {
     font-size: clamp( 22px, 2.2vw, 2rem);
     color: var(--color-first);
-    text-shadow: 1.5px 1.5px 0px var(--color-fourth);
+    text-shadow: 1.5px 1.5px 0px var(--color-fourth), -.2px -.2px 3px rgb(0, 0, 0);
     font-weight: bold;
     margin: 5px;
 }
