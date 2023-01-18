@@ -76,6 +76,10 @@ strong {
     font-weight: bold;
 }
 
+br.break-title {
+    display: none;
+}
+
 /* Fim Montanhas */
 
 /* Medias Querys */
@@ -100,5 +104,10 @@ strong {
     div.saudation {
         min-width: 90vw;
         max-width: 90vw;
+    }
+
+    br.break-title {
+        display: inline-block;
+
     }
 }
