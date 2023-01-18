@@ -15,7 +15,7 @@ section#myProjects {
 }
 
 section#myProjects > h1 {
-    font-size: clamp(24px, 8.5vw, 119px);
+    font-size: clamp(16px, 8.5vw, 119px);
     color: var(--color-black-second);
     font-family: var(--headline);
     font-weight: bolder;

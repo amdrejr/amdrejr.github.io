@@ -1,9 +1,46 @@
-section#contact-sec {
-    width: 300px;
+/* Reflexo Montanhas */
+section.montanha-reflexo {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    
+}
+
+div.separate {
     position: absolute;
-    bottom: 100px;
-    right: 50%;
-    transform: translateX(50%);
+    z-index: -2;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(1deg,rgba(83, 85, 82, 0) 30%, rgba(36, 160, 129, 0.15) 80%,  rgba(0, 41, 39, 0.25) );
+}
+
+div.water-effect {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    transform: rotateX(180deg) scaleX(135%)  translateY(-2px) skewX(-8deg);
+    filter: url("#turbulence");
+    background-image: url(/assets/images/montanhas.png), linear-gradient(0.2deg, #7575a1 35%, #488bad 73.5%,#774faa 85%,#402557 90%, black 99%);
+}
+
+section.montanha-reflexo svg {
+    width: 0;
+    height: 0;
+}
+/*Fim Reflexo Montanhas */
+
+/* Contato */
+div#contact-sec {
+    width: 300px;
+
     z-index: 20;
 }
 
@@ -60,7 +97,20 @@ section#contact-sec {
 
 
 @media screen and (max-width: 992px) { 
-    section#contact-sec { 
-        bottom: 125px;
+
+    section.montanha-reflexo { height: auto; }
+
+    div#contact-sec { margin: 60px 0px 120px 0px; }
+}
+
+@media screen and (max-width: 400px) {
+
+    div#contact-sec {
+        width: 75vw;
     }
+
+    div#contact-sec h1 {
+        font-size: clamp(20px, 11.2vw, 45px);
+    }
+    
 }

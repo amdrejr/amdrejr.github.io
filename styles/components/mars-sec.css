@@ -11,6 +11,7 @@ section#mars-sec {
 }
 
 #mars-sec > img {
+
     position: absolute;
     left: 10%;
     top: 30%;
@@ -63,7 +64,6 @@ section#mars-sec {
     font-size: 1.2em;
 }
 
-
 div#mars-skills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -82,7 +82,6 @@ div.skill-item {
     'imagem titulo titulo'
     'imagem progress progress';
 }
-
 
 img.skill-image {
     grid-area: imagem;
@@ -151,27 +150,27 @@ div.prog-charge.native  {width: 40% }
 
 @media screen and (max-width: 992px) {
 
-    #mars-sec { height: 85vh;}
+    #mars-sec { height: calc(100vh - 100vw); }
 
-    #mars-sec > img { height: 40.5vw; }
+    #mars-sec > img { height: 32.4vw; }
     
-    .base-mars { height: 41vw; }
+    .base-mars { height: 32.8vw; }
 
     #mars-sec > img, .base-mars, .hole-mars { top: 0; }
 
     .hole-mars {
-        width: 40.5vw;
-        height: calc(40.5vw - 4px);
+        width: 32.4vw;
+        height: calc(32.4vw - 4px);
         box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 3vw -2vw 25px black, inset 0px 0px 1vw rgba(0, 0, 0, 1);
     }
 
     div.mars-content { 
-        padding-top: 15vh;
+        padding-top: 10vw;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
-    .mars-content h1 { font-size: 48px}
+    .mars-content h1 { font-size: clamp(27px, 15vw, 45px)}
 
     div#mars-skills { 
         grid-template-columns: 1fr;

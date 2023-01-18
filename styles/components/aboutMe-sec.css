@@ -33,7 +33,7 @@ div.aboutMe-title em {
 
 div.aboutMe-text {
     text-shadow: 1px 0px 0px var(--color-black-third);
-    padding: 10px;
+    padding: clamp( 5px , 1.5vw, 10px);;
 }
 
 div.aboutMe-text h1 {
@@ -45,8 +45,8 @@ div.aboutMe-text h1 {
 }
 
 div.aboutMe-text p {
-    margin-bottom: 10px;
-    font-size: clamp(1rem, 3.7vw, 1.5rem);
+    margin-bottom: clamp(0.4rem, 1.9vw, 0.7rem);
+    font-size: clamp(0.75rem, 3.7vw, 1.35rem);
     line-height: clamp(1rem, 4.6vw, 2rem);
 }
 
@@ -54,13 +54,13 @@ div.aboutMe-text p {
 @media screen and (max-width: 992px) {
 
     div.aboutMe-title { 
-        font-size: clamp(40px, 9vw,100px);
-        padding: 5px;
+        font-size: clamp(25px, 9vw,100px);
+        padding: clamp( 2px , 1vw, 5px);
         text-align: right;
     }
     div.aboutMe-title em {
         text-shadow: -0.2vw -0.2vw 0px var(--color-black-third);   
-        font-size: clamp(40px, 9vw,100px);
+        font-size: clamp(25px, 9vw,100px);
         line-height: inherit;
     }
 }
@@ -68,4 +68,12 @@ div.aboutMe-text p {
 @media screen and (max-width: 768px) {
     div.aboutMe-title { text-align: center; }
     div.aboutMe-title em { display: inline; } 
+}
+
+@media screen and (max-width: 330px) {
+    div.aboutMe-title, div.aboutMe-title em { 
+        text-align: start; 
+        text-indent: 2.2rem;
+        font-size: clamp(16px, 8vw, 25px);
+    }
 }

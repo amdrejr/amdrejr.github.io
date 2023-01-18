@@ -10,7 +10,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-
     /* display: none; */
 }
 
@@ -19,6 +18,7 @@
     animation: jupiter-rotation 50s linear 0s infinite reverse backwards;
     left: 50%;
     transform: translateX(-15.45%);
+
 }
 
 .base-jupiter {
@@ -28,6 +28,8 @@
 	background-color: black;
 	mix-blend-mode: hard-light;
     /* opacity: .5; */
+    box-shadow: 0px -2px 0px black, 0px 2px 0px black;
+
     
 }
 
