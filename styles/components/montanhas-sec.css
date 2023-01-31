@@ -87,7 +87,7 @@ br.break-title {
 #curriculum-button {
     width: 240px;
     height: 60px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
     line-height: 60px;
     color: var(--color-black-first);
@@ -124,8 +124,8 @@ br.break-title {
         box-shadow: -0.3vw -0.3vw 0px var(--color-black-first);
         width: clamp(120px, 24vw ,240px);
         height: clamp(30px, 6vw ,60px);
-        line-height: clamp(30px, 6vw ,60px);
-        font-size: clamp(12px, 2.7vw, 2rem);
+        line-height: clamp(30px, 6vw, 60px);
+        font-size: clamp(12px, 2.7vw, 1.7rem);
     }   
 }
 
