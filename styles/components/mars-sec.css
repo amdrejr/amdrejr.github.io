@@ -1,36 +1,39 @@
 @charset "UTF-8";
 
-/* Mars Section */
-section#mars-sec {
-    position: relative;
+#mars-sec {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    
+    min-height: 95vh;
+    height: auto;
+    position: relative;
+    padding-bottom: 5vh;
     /* display: none; */
 }
 
-#mars-sec > img {
+/* Mars Planet */
+.mars-planet {
+    position: relative;
+    width: 305px;
+    height: 300px;
+    overflow: hidden;
+    transform: translate(3vw, 3vw);
+}
 
+.mars-planet > img{
     position: absolute;
-    left: 10%;
-    top: 30%;
     animation: mars-rotation 60s linear 0s infinite reverse backwards;
 }
 
 .base-mars {
-    padding-top: 2px;
     position: absolute;
-    top: 30%;
     width: 100%;
     height: 300px;
+    padding: 2px 0px 0 2px;
     background-color: black;
     mix-blend-mode: hard-light;
     /* opacity: .5; */
 }
 
 .hole-mars {
-    margin-left: 10%;
     width: 300px;
     height: 296px;
     border-radius: 50%;
@@ -38,151 +41,111 @@ section#mars-sec {
     box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 25px -20px 25px black, inset 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
-/* Skill Content */
-
-.mars-content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mars-content h1 {
-    font-family: var(--headline);
-    color: var(--color-black-second);
-    text-shadow: -0.2vw -0.2vw 0px var(--color-black-third);;
-    font-size: 100px;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.mars-content h2 {
-    font-family: var(--body);
-    font-size: 1.2em;
-}
-
-div#mars-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: min-content;
-    gap: 50px;
-}
-
-div.skill-item {
-    width: 210px;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    'imagem titulo titulo'
-    'imagem progress progress';
-}
-
-img.skill-image {
-    grid-area: imagem;
-    image-rendering: pixelated;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.skill-title {
-    grid-area: titulo;
-    font-family: var(--body);
-    text-align: center;
-}
-
-.progress {
-    height: 25px;
-    width: 150px;
-    grid-area: progress;
-    border: 6px solid var(--color-first);
-    border-image-source: url('/assets/images/borda-battery.png');
-    image-rendering: pixelated;
-    border-image-slice: 9;
-    overflow: hidden;
-}
-
-div.prog-charge {
-    background-image: url('/assets/images/progress-bar.png');
-    image-rendering: pixelated;
-    width: 100%;
-    height: 100%;
-}
-
-div.prog-charge.js      {width: 70% }
-div.prog-charge.css     {width: 85% }
-div.prog-charge.html    {width: 90% }
-div.prog-charge.flutter {width: 50% }
-div.prog-charge.python  {width: 65% }
-div.prog-charge.react   {width: 50% }
-div.prog-charge.native  {width: 40% }
-
-
-
-
-
-
-
-
-/* Media Querys */
-@media screen and (max-width: 1620px) {
-    .mars-content {
-        left: 45%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-@media screen and (max-width: 1380px) {
-    .mars-content h1 { font-size: 75px}
-    div#mars-skills {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
-}
-
-
-@media screen and (max-width: 992px) {
-
-    #mars-sec { height: calc(100vh - 100vw); }
-
-    #mars-sec > img { height: 32.4vw; }
-    
-    .base-mars { height: 32.8vw; }
-
-    #mars-sec > img, .base-mars, .hole-mars { top: 0; }
-
-    .hole-mars {
-        width: 32.4vw;
-        height: calc(32.4vw - 4px);
-        box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 3vw -2vw 25px black, inset 0px 0px 1vw rgba(0, 0, 0, 1);
-    }
-
-    div.mars-content { 
-        padding-top: 10vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .mars-content h1 { font-size: clamp(27px, 15vw, 45px)}
-
-    div#mars-skills { 
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 25px;
-    }
-}
-
-
 @keyframes mars-rotation {
 
     100% {
         transform: translateX(-66.7%);    
+    }
+}
+
+
+
+/* mars-content */
+.mars-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--body);
+    width: min(80vw, 1200px);
+}
+
+.mars-content > h1 {
+    font-family: var(--headline);
+    color: var(--color-black-second);
+    text-shadow: -0.2vw -0.2vw 0px var(--color-black-third);;
+    text-align: center;
+    font-size: 100px;
+}
+
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-box h3 {
+    flex-basis: 100%;
+    margin: 25px 0px 0px 0px;
+    text-align: center;
+    color: var(--color-warning);
+    
+}
+
+.skill-item {
+    background-color: var(--color-black-second);
+    width: 240px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: all 200ms linear;
+    text-shadow: 1px 1px 0px black;
+}
+
+.skill-item:hover{
+    transform: scale(1.01);
+    background-color: var(--color-first);
+}
+
+.skill-item > img {
+    width: 30px;
+    height: 30px;
+    image-rendering: pixelated;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .mars-planet {
+        position: relative;
+        width: calc(25vw + 5px);
+        height: 25vw;
+        margin: 20px;
+    }
+
+    .mars-planet > img {
+        height: 25vw;
+    }
+    .base-mars { 
+        height: 25vw;
+        
+    }        
+
+    .mars-planet > img, .base-mars, .hole-mars { top: 0; }
+
+    .hole-mars {
+        width: 25vw;
+        height: calc(25vw - 4px);
+        box-shadow: 0px 0px 4px rgba(255, 135, 55, 0.322),inset 3vw -2vw 25px black, inset 0px 0px 1vw rgba(0, 0, 0, 1);
+    }
+    
+    .mars-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: auto;
+        transform: none;
+
+    }
+
+    .mars-content h1 {
+        font-size: clamp( 38px, 10vw, 100px);
     }
 }
