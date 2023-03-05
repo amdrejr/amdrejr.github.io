@@ -4,6 +4,7 @@
 .jupiter-sec {
     position: relative;
 	width: 100%;
+    min-height: 720px;
 	height: 100vh;
     background-color: black;
     background-clip: border-box;

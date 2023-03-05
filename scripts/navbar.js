@@ -1,5 +1,5 @@
 ////// Códigos para efeito no botão navbar mobile
-if(window.screen.width <= 768) {
+if(window.screen.width <= 812) {
 
 const menuIconEl = document.querySelector('#icon-menu')
 const itens = document.querySelectorAll('.ulNav li a')

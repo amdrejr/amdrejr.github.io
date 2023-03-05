@@ -3,6 +3,7 @@
 /* Montanhas Section */
 section.montanhas-sec {
     width: 100%;
+    min-height: 840px;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: contain;
