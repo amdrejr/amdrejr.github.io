@@ -43,7 +43,10 @@ div.itemProject {
     border-right: none;
     border-bottom: none;
     padding: 32px 32px 0px 32px;
-    transition: padding 200ms ease-in-out, background-color, box-shadow 300ms linear;
+    transition: 
+        padding 200ms ease-in-out, 
+        background-color 300ms ease-in-out, 
+        box-shadow 300ms linear;
     cursor:  default;
     overflow: hidden;    
 }
