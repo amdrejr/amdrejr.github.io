@@ -34,12 +34,16 @@ div.gridProjectItens {
 div.itemProject {
     position: relative;
     background-color: var(--color-black-second);
-    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.788);
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.788);
     text-shadow: 1px 0px 0px black;
-    border-radius: 24px;
     height: 305px;
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.726),
+                -5px -5px 0 var(--color-first);
+    border: 3px solid black;
+    border-right: none;
+    border-bottom: none;
     padding: 32px 32px 0px 32px;
-    transition: padding 200ms ease-in-out, background-color 300ms linear;
+    transition: padding 200ms ease-in-out, background-color, box-shadow 300ms linear;
     cursor:  default;
     overflow: hidden;    
 }
@@ -47,6 +51,7 @@ div.itemProject {
 div.itemProject:hover {
     padding: 48px 32px 0px 42px;
     background-color: var(--color-first);
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 1);
 }
 
 div.itemProject span {
@@ -214,12 +219,15 @@ div.qua > img.img-flutuant.projMemoria {
     div.gridProjectItens {
         display: flex;
         flex-direction: column;
-        gap: 2.5vw;
+        gap: max(6px, 2.5vw);
     }
 
     div.itemProject { 
         height: auto;
         padding: max(27.3px ,2.35vw);
+        box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.726),
+                -3px -3px 0 var(--color-first);
+        margin: 0px 3px;
     }
 
     div.itemProject:hover {

@@ -47,7 +47,7 @@ div.aboutMe-text h1 {
 
 div.aboutMe-text p {
     margin-bottom: clamp(0.4rem, 1.9vw, 0.7rem);
-    font-size: clamp(0.75rem, 3.7vw, 1.35rem);
+    font-size: clamp(0.75rem, 3.7vw, 1.2rem);
     line-height: clamp(1rem, 4.6vw, 2rem);
 }
 

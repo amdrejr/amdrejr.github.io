@@ -7,7 +7,7 @@
     --body: 'Fira Code', monospace;
 
     --color-black-first: black;
-    --color-black-second: rgb(51, 47, 44);
+    --color-black-second: #332f2c;
     --color-black-third: #9b9084;
 
     --color-first: #EC7100;
@@ -41,13 +41,30 @@ body {
     user-select: none; /* desabilitar seleção */
 }
 
-strong {
-    color: #dfb289;
-    text-shadow: 1px 1px 0px var(--color-black-first );
+span.italic {
+    font-style: italic;
+    color: var(--color-black-third);
+    text-transform: lowercase !important
 }
 
+strong {
+    color: #dfb289;
+    text-shadow: 1px 1px 0px var(--color-fourth);
+}
 
+strong.--yellow {
+    color: var(--color-warning);
+}
 
+strong.--orange {
+    color: var(--color-first);
+    text-shadow: 1px 1px 0px var(--color-error);
+}
+
+strong.--green {
+    color: var(--color-success);
+    text-shadow: 1px 1px 0px var(--color-fourth);
+}
 
 
 
