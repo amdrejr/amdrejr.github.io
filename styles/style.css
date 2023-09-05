@@ -41,6 +41,15 @@ body {
     user-select: none; /* desabilitar seleção */
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.hover:hover {
+    text-decoration: underline;
+}
+
 span.italic {
     font-style: italic;
     color: var(--color-black-third);
