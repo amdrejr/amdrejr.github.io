@@ -80,53 +80,68 @@
         </section>
          
 
-        <section id="myProjects">
-            <h1>TESTE</h1>
-            <div class="gridProjectItens">
+        <section id="myProjects-sec">
+            <div id="myProjects">
+                <h2>My Projects</h2>
 
-                <div class="itemProject pri"> <!-- Atualizar -->
-                    <span>JavaScript</span>
-                    <h1>Text to Speech</h1> <i class="setaIcon"></i>
-                    <p>Extensão de navegador.</p>
-                    <p>Converter texto para fala humana sintetizada, através da API da <strong class="--yellow">Google Cloud</strong>!</p>
-                    <p>Back-end em <strong class="--yellow">Node.js</strong> com <strong class="--yellow">Express.js</strong>.</p>
-                    <span class="italic">[em construção...]</span>
+                <button class="folder-btn first ">Back-end</button>
+                <button class="folder-btn sec ofuscar">Front-end</button>
+                <div class="gridProjectItens">
+    
+                    <div class="pri "> <!-- Atualizar -->
+                        <div class="project-content">
+                            <span>JavaScript</span>
+                            <h1>Text to Speech</h1> <i class="setaIcon"></i>
+                            <p>Extensão de navegador.</p>
+                            <p>Converter texto para fala humana sintetizada, através da API da <strong class="--yellow">Google Cloud</strong>!</p>
+                            <p>Back-end em <strong class="--yellow">Node.js</strong> com <strong class="--yellow">Express.js</strong>.</p>
+                            <span class="italic">[em construção...]</span>
+                        </div>
+                    </div>
+                    
+                    <div class="seg"> <!-- StopControl - Flutter -->
+                        <div class="project-content">
+                            <!-- <img src="assets/images/proj-flutter.png" class="img-flutuant" alt="Projeto Flutter Imagem"> -->
+                            <span>Flutter - Mobile</span>
+                            <h1>Controle de Chamados</h1>
+                            <a href="https://github.com/amdrejr/Flutter-Controle-de-Chamados-e-Exportacao-.xlsx" target="_blank"><i class="setaIcon"></i></a>
+                            <p>Substituir folhas de papel, maximizar tempo de serviço e gerar um histórico de chamados em <strong class="--yellow">.xlsx</strong>!</p>
+                            <p>Projeto semestral do curso de <strong>Eng. de Computação</strong>. Onde um dos critérios seria solucionar um <strong>caso real</strong> com uma aplicação.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ter"> <!-- Jogo da memória -->
+                        <div class="project-content">
+                            <!-- <img src="assets/images/proj-jogo-memoria.png" class="projMemoria img-flutuant" alt="Projeto Jogo da Memória"> -->
+                            <span>JavaScript</span>
+                            <h1>Jogo da Memória</h1>
+                            <a href="https://amdrejr-jogo-da-memoria.netlify.app/"  class="setaIcon" target="_blank"><i class="setaIcon"></i></a>
+                            <p>Jogo da Memória feito em em <strong>JavaScript puro</strong>.</p>
+                            <p>Seguindo os princípios de componetização da biblioteca <strong class="--yellow">React.js</strong>.</p>
+                            <p>build tool: <strong class="--yellow">Vite</strong>.</p>
+                        </div>
+                    </div>
+    
+                    <div class="qua"> <!-- Todo-list -->
+                        <div class="project-content">
+                            <!-- <img src="assets/images/proj-lista-tarefas.png" class="projMemoria img-flutuant" alt="Projeto Lista de Tarefas"> -->
+                            <span>React.js</span>
+                            <h1>Lista To-do</h1>
+                            <a href="https://amdrejr-todo-list.netlify.app/"  class="setaIcon" target="_blank"><i class="setaIcon"></i></a>
+                            <p>Uma lista de tarefas simples.</p>
+                            <p>Onde é possível, criar, editar, concluir e remover tarefas.</p>
+                        </div>
+                    </div>
+    
+                    <div class="qui"> <!-- Github -->
+                        <div class="project-content">
+                            <!-- <img src="assets/images/github-pixel.png" alt="Imagem Github"> -->
+                            <a href="https://github.com/amdrejr" target="_blank"><i class="setaIcon"></i></a>
+                            <p>Veja mais em meu GitHub!</p>
+                        </div>
+                    </div>
+    
                 </div>
-                
-                <div class="itemProject seg"> <!-- StopControl - Flutter -->
-                    <img src="assets/images/proj-flutter.png" class="img-flutuant" alt="Projeto Flutter Imagem">
-                    <span>Flutter - Mobile</span>
-                    <h1>Controle de Chamados</h1> 
-                    <a href="https://github.com/amdrejr/Flutter-Controle-de-Chamados-e-Exportacao-.xlsx" target="_blank"><i class="setaIcon"></i></a>
-                    <p>Substituir folhas de papel, maximizar tempo de serviço e gerar um histórico de chamados em <strong class="--yellow">.xlsx</strong>!</p>
-                    <p>Projeto semestral do curso de <strong>Eng. de Computação</strong>. Onde um dos critérios seria solucionar um <strong>caso real</strong> com uma aplicação.</p>
-                </div>
-                
-                <div class="itemProject ter"> <!-- Jogo da memória -->
-                    <img src="assets/images/proj-jogo-memoria.png" class="projMemoria img-flutuant" alt="Projeto Jogo da Memória">
-                    <span>JavaScript</span>
-                    <h1>Jogo da Memória</h1> 
-                    <a href="https://amdrejr-jogo-da-memoria.netlify.app/"  class="setaIcon" target="_blank"><i class="setaIcon"></i></a>
-                    <p>Jogo da Memória feito em em <strong>JavaScript puro</strong>.</p>
-                    <p>Seguindo os princípios de componetização da biblioteca <strong class="--yellow">React.js</strong>.</p>
-                    <p>build tool: <strong class="--yellow">Vite</strong>.</p>
-                </div>
-
-                <div class="itemProject qua"> <!-- Todo-list -->
-                    <img src="assets/images/proj-lista-tarefas.png" class="projMemoria img-flutuant" alt="Projeto Lista de Tarefas">
-                    <span>React.js</span>
-                    <h1>Lista To-do</h1> 
-                    <a href="https://amdrejr-todo-list.netlify.app/"  class="setaIcon" target="_blank"><i class="setaIcon"></i></a>
-                    <p>Uma lista de tarefas simples.</p>
-                    <p>Onde é possível, criar, editar, concluir e remover tarefas.</p>
-                </div>
-
-                <div class="itemProject qui"> <!-- Github -->
-                    <img src="assets/images/github-pixel.png" alt="Imagem Github">
-                    <a href="https://github.com/amdrejr" target="_blank"><i class="setaIcon"></i></a>
-                    <p>Veja mais em meu GitHub!</p>
-                </div>
-
             </div>
         </section>
 
@@ -302,5 +317,6 @@
     
     <script src="scripts/index.js"></script>
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/myProjects.js"></script>
 </body>
 </html>
