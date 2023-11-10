@@ -1,5 +1,6 @@
 #myProjects-sec {
     width: 100%;
+    min-height: 962px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,8 +18,9 @@
 #myProjects h2 {
     font-family: var(--headline);
     font-size: 4rem;
-    font-weight: 700;
-    color: #fff;
+    font-size: clamp(1.6rem, 8vw, 4rem);
+    color: white;
+    text-shadow: -.13vw -.13vw 0px var(--color-black-third);
     position: absolute;
     top: 0;
     right: 0;
@@ -35,50 +37,60 @@
     left: 0;
     z-index: 2;
     height: 78px;
-    width: clamp(75px, 20vw, 300px);
+    width: clamp(130px, 25vw, 300px);
     border-radius: 20px 30px 0 0;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: clamp( 1.2rem, 3vw, 2rem);
     color: white;
+    text-shadow: -2px -2px 0px black;
     text-align: start;
     padding: 20px;
     border: 3px solid var(--color-first);
     border-bottom: none;
-}
-.folder-btn.first {
-    left: 0;
+    transition: left .7s ease;
     box-shadow: inset 5px 16px 15px rgba(0, 0, 0, 0.425);
 }
 
-.folder-btn.sec {
-    left: clamp(80px, calc(20vw + 5px), 305px);
-    box-shadow: inset 0 6px 6px rgba(0, 0, 0, 0.5);
-}
 
 .folder-btn.openFolder {
+    left: clamp(135px, calc(25vw + 5px), 305px);
     z-index: -1;
-    opacity: 0.7;
     box-shadow: none;
-    border: none;
+    border: 3px solid rgba(83, 77, 69, 0.349);
+    box-shadow: inset 0 0px 30px rgb(0, 0, 0);
 }
 
-
-
-.gridProjectItens {
-    z-index: 1;
+#gridProjectItens {
+    position: relative;
     padding: 50px;
     background-color: var(--color-black-second);
     width: 100%;
-    height: 100%;
-    border-radius: 0 30px 60px 60px;
+    height: 705px;
+    border-radius: 0 60px 60px 60px;
     border: 3px solid var(--color-first);
     box-shadow: inset 5px -15px 15px rgba(0, 0, 0, 0.425);
     display: grid;
     gap: 20px;
+    /* os abaixo também é alterado inline nos arquivos */
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
+    grid-template-areas: 
         'pri pri seg seg' 
         'ter ter qua qui';
+}
+
+#gridProjectItens::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -15px;
+    right: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 60px 60px 60px;
+    background-color: var(--color-black-second);
+    border: 3px solid var(--color-first);
+    opacity: 0.5;
+    transform: skew(2deg, -1deg);
 }
 
 .pri { grid-area: pri;}
@@ -86,3 +98,155 @@
 .ter { grid-area: ter;}
 .qua { grid-area: qua;}
 .qui { grid-area: qui;}
+
+
+/* Estilização cards items */
+.card-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    box-shadow: inset 0 0 50px rgb(0, 0, 0, .4), -6px -6px 0px rgba(0, 0, 0, 0.6), -12px -12px 0px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    transition: background-color .4s ease-in-out, box-shadow .4s ease-in-out;
+    overflow: hidden;
+}
+
+.card-item:hover {
+    background-color: var(--color-first);
+    box-shadow: inset 0 0 50px rgb(0, 0, 0, .8);
+}
+
+
+.project-content { 
+    text-shadow: -1px -1px 0px black;
+    width: 100%;
+    height: 100%;
+    transition: transform .2s ease-in-out;
+}
+
+.project-content:hover {
+    transform: translate(6px, 6px);
+}
+
+.project-content h3 {
+    font-size: 1.75rem;
+    margin: 10px 0px;
+    color: var(--color-second);
+}
+
+.project-content p {
+    font-size: clamp(15px, 1.6vw, 19px);
+    line-height: clamp(20px, 1.92vw, 26.4px);
+    margin-bottom: 10px;
+}
+
+.project-content p::before {
+    content: '-> ';
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.project-content span{
+    font-size: clamp(12px, 1.15vw ,16px);
+    display: block;
+    text-transform: uppercase;
+}
+
+.setaIcon {
+    position: absolute;
+    z-index: 5;
+    top: 18px;
+    right: 18px;
+    background-image: url('/assets/svg/seta.svg');
+    width: 50px;
+    height: 50px;
+    transition: transform .3s ease-in-out;
+    cursor: pointer;
+}
+
+.setaIcon:hover {
+    transform: rotate(330deg);
+}
+
+.img-flutuant {
+    width: 240px;
+    position: absolute;
+    z-index: 5;
+    bottom: -100%;
+    left: 50%;
+    border-radius: 12px 12px 0 0;
+    transition: bottom 500ms ease-in-out, opacity 500ms linear, transform 400ms ease-in-out;
+    will-change: transform, bottom;
+    transform: translateX(-50%) scale(0.5);
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.692));
+
+}
+
+.card-item:hover .img-flutuant {
+    bottom: 0px;
+    transform: translateX(-50%) scale(1);
+}
+
+.card-item.github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(16px, 1.6vw ,22px);
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: -1.5px -1.5px 0px black;
+}
+
+.card-item.github img {
+    width: clamp(60px, 8.4vw, 115px);
+    image-rendering: pixelated;
+    transition: transform 300ms ease-in-out;
+}
+
+.card-item.github:hover > img {
+    transform: scale(1.1) translateY(-6px);
+}
+
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1500px) {
+    #myProjects-sec {
+        padding: max(50px, 13vw) 2.8vw 0 5vw;
+    }
+    
+    #myProjects h2 {
+        top: min(-40px, -10vw);
+    }    
+
+    .setaIcon {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    #myProjects-sec {
+        height: max-content;
+    }
+    
+    #gridProjectItens {
+        padding: max(20px, 3vw);
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #gridProjectItens::before {
+        transform: skew(.4deg, -1deg);
+    }
+
+    .img-flutuant {
+        width: max(160px, 17.4vw);
+    }
+}
