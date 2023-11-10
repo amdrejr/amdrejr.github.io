@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap');
+
+.certification-sec {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    height: auto;
+    padding: clamp(2.4rem, 10vw, 7rem) 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    gap: 50px;
+}
+
+.certification-sec h2 {
+    position: absolute;
+    top: 0;
+    font-family: var(--headline);
+    color: var(--color-black-second);
+    text-shadow: -0.18vw -0.18vw 0px var(--color-black-third);
+    text-align: center;
+    font-size: clamp(1.4rem, 8vw, 4rem);
+}
+
+.card {
+    position: relative;
+    width: 360px;
+    height: 500px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #283443, #f7971c);
+    border: 10px solid transparent;
+    border-image: radial-gradient(circle, rgba(106,75,29,1) 0%, #380404 50%, #091f39 100%);
+    border-image-slice: 1;
+    box-shadow: inset 0px 0px 20px #000000b3;
+    transition: filter .3s ease-in-out,
+                transform .3s ease-in-out,
+                box-shadow .3s linear;
+}
+
+.emBreve {
+    width: 100%;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.842);
+    text-align: center;
+    font-family: var(--body);
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card:hover {
+    filter: brightness(1.2);
+    transform:  scale(1.03) ;
+    box-shadow: inset 0px 0px 12px #00000036, 0px 0px 60px rgba(255, 255, 0, 0.2);
+}
+
+.card-title {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    border: 6px inset #000000a6;
+    background-color: #aaa49aab;
+    box-shadow: inset 0px 0px 12px #00000036;
+}
+
+.card-title h3 {
+    font-family: 'Caudex', serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    text-shadow: -1px 01px 0 black;
+}
+
+.card-title img {
+    width: 30px;
+    filter: drop-shadow(0px 0px 4px #00000041);
+}
+
+.card-star p {
+    text-align: end;
+    font-family: 'Caudex', serif;
+    letter-spacing: 1.5px;
+    padding: 0 5px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.card-img {
+    background-image: url("../../assets/images/aws-practitioner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 240px;
+    background-size: contain
+}
+
+.card-content {
+    min-height: 130px;
+    background-color: #aaa49aab;
+    padding: 6px;
+    border: 5px ridge #380404;
+    box-shadow: inset 0px 0px 12px #00000086;
+    color: black;
+    line-height: 1.1rem;
+}
+
+.card-content h4 {
+    font-family: 'Caudex', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-family: 'Caudex', serif;
+    font-size: 0.91rem;
+    letter-spacing: 1.1px;
+    text-align: justify;
+}
+
+
+/* AZ-900 */
+.card.az-900  {
+    background: linear-gradient(45deg, #505050, #003296);
+}
+
+.card.az-900 > .card-img {
+    background-image: url("../../assets/images/az-900.png");
+}
+
+.card.az-900 > .card-star p {
+    color: white;
+}
+
+.card.az-900:hover {
+    transform:  rotate3d(1, 1, -.3, 12deg);
+}
+
+/* AI-900 */
+.card.ai-900  {
+    background: linear-gradient(45deg, #505050, #003296);
+}
+
+.card.ai-900 > .card-img {
+    background-image: url("../../assets/images/ai-900.png");
+}
+
+.card.ai-900 > .card-star p {
+    color: white;
+}
+
+.card.ai-900:hover {
+    transform:  rotate3d(1, 1, -.3, -12deg);
+}
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 400px) {
+    .certification-sec {
+        gap: 20px;
+    }
+    
+    .card {
+        width: 324px;
+        height: fit-content;
+        gap: 8px;
+    }
+
+    .card-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-star p {
+        font-size: 0.7rem;
+    }
+
+    .card-img {
+        min-height: 216px;
+    }
+
+    .emBreve {
+        font-size: 2.4rem;
+    }
+}
