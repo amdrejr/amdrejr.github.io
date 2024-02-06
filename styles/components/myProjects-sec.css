@@ -147,6 +147,22 @@
     font-weight: bold;
 }
 
+.project-content .content-box {
+    margin-left: min(5vw, 40px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.project-content p.content {
+    width: 180px;
+    margin-bottom: 0;
+}
+
+.project-content p.content::before {
+    content: '--> ';    
+}
+
 .project-content span{
     font-size: clamp(12px, 1.15vw ,16px);
     display: block;
